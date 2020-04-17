@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CLIP Hugo Site – Reference</title>
-    <link>http://example.org/docs/reference/</link>
-    <description>Recent content in Reference on CLIP Hugo Site</description>
+    <title>CLIP – Reference</title>
+    <link>https://clip-hpc.github.io/docs/reference/</link>
+    <description>Recent content in Reference on CLIP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://example.org/docs/reference/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://clip-hpc.github.io/docs/reference/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Parameter Reference</title>
-      <link>http://example.org/docs/reference/parameter-reference/</link>
+      <link>https://clip-hpc.github.io/docs/reference/parameter-reference/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/reference/parameter-reference/</guid>
+      <guid>https://clip-hpc.github.io/docs/reference/parameter-reference/</guid>
       <description>
         
         

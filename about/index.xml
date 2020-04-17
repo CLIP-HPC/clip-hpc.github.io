@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CLIP Hugo Site – The CLIP thing</title>
-    <link>http://example.org/about/</link>
-    <description>Recent content in The CLIP thing on CLIP Hugo Site</description>
+    <title>CLIP – The CLIP thing</title>
+    <link>https://clip-hpc.github.io/about/</link>
+    <description>Recent content in The CLIP thing on CLIP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://example.org/about/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://clip-hpc.github.io/about/index.xml" rel="self" type="application/rss+xml" />
     
     
       

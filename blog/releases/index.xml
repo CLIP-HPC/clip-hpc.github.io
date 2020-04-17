@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CLIP Hugo Site – New Releases</title>
-    <link>http://example.org/blog/releases/</link>
-    <description>Recent content in New Releases on CLIP Hugo Site</description>
+    <title>CLIP – New Releases</title>
+    <link>https://clip-hpc.github.io/blog/releases/</link>
+    <description>Recent content in New Releases on CLIP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://example.org/blog/releases/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://clip-hpc.github.io/blog/releases/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Blog: Another Great Release</title>
-      <link>http://example.org/blog/2018/01/04/another-great-release/</link>
+      <link>https://clip-hpc.github.io/blog/2018/01/04/another-great-release/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/2018/01/04/another-great-release/</guid>
+      <guid>https://clip-hpc.github.io/blog/2018/01/04/another-great-release/</guid>
       <description>
         
         
