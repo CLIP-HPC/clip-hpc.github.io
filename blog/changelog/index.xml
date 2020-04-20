@@ -1,15 +1,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CLIP – CLIP</title>
-    <link>https://clip-hpc.github.io/</link>
-    <description>Recent content on CLIP</description>
+    <title>CLIP – Change Notes</title>
+    <link>https://clip-hpc.github.io/blog/changelog/</link>
+    <description>Recent content in Change Notes on CLIP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://clip-hpc.github.io/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://clip-hpc.github.io/blog/changelog/index.xml" rel="self" type="application/rss+xml" />
     
     
       
+        
       
     
     
@@ -30,20 +31,6 @@
 &lt;li&gt;Support for multiple versions of R (currently 3.5.1 and 3.6.0, bare or with texlive+bioconductor)&lt;/li&gt;
 &lt;li&gt;The default R version can be changed by the user and is remembered when restoring an R project&lt;/li&gt;
 &lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Blog: New CLIP website</title>
-      <link>https://clip-hpc.github.io/blog/2020/04/12/new-clip-website/</link>
-      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://clip-hpc.github.io/blog/2020/04/12/new-clip-website/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Our new CLIP website is now live&lt;/p&gt;
 
       </description>
     </item>
