@@ -7,7 +7,6 @@
 
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://clip-hpc.github.io/docs/index.xml">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,15 +20,26 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Documentation | CLIP</title><meta property="og:title" content="Documentation" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://clip-hpc.github.io/docs/" />
+<title>Advanced SLURM Guide | CLIP</title><meta property="og:title" content="Advanced SLURM Guide" />
+<meta property="og:description" content="This document describes the SLURM configuration on CBE &amp; SLURM examples. 
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clip-hpc.github.io/docs/cbe/slurm/" />
+<meta property="article:published_time" content="2017-01-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-20T16:56:02+02:00" />
+<meta itemprop="name" content="Advanced SLURM Guide">
+<meta itemprop="description" content="This document describes the SLURM configuration on CBE &amp; SLURM examples. 
+">
+<meta itemprop="datePublished" content="2017-01-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-20T16:56:02&#43;02:00" />
+<meta itemprop="wordCount" content="2140">
 
-<meta itemprop="name" content="Documentation">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Documentation"/>
-<meta name="twitter:description" content=""/>
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Advanced SLURM Guide"/>
+<meta name="twitter:description" content="This document describes the SLURM configuration on CBE &amp; SLURM examples. 
+"/>
 
 
 
@@ -46,7 +56,7 @@
 
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -139,7 +149,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Documentation</a>
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation</a>
   </li>
   <ul>
     <li class="collapse show" id="docs">
@@ -156,10 +166,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/clip/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">CLIP</a>
+    <a  href="/docs/clip/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">CLIP</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsclip">
+    <li class="collapse " id="docsclip">
       
       
       
@@ -179,7 +189,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/cbe/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">CBE</a>
+    <a  href="/docs/cbe/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">CBE</a>
   </li>
   <ul>
     <li class="collapse show" id="docscbe">
@@ -201,7 +211,7 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docscbeslurm" href="/docs/cbe/slurm/">Slurm</a>
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docscbeslurm" href="/docs/cbe/slurm/">Slurm</a>
       
       
       
@@ -277,8 +287,8 @@
 
 
 
-<a href="https://github.com/clip-hpc/wesbite//edit/master/content/en/docs/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/clip-hpc/wesbite//issues/new?title=Documentation" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/clip-hpc/wesbite//edit/master/content/en/docs/CBE/slurm/index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/clip-hpc/wesbite//issues/new?title=Advanced%20SLURM%20Guide" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 
 
 <a href="https://github.com/clip-hpc/wesbite//issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
@@ -289,6 +299,28 @@
 
 
 
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#slurm">SLURM</a>
+      <ul>
+        <li><a href="#slurm-terminology">SLURM Terminology</a></li>
+        <li><a href="#slurm-command-line-utilities">SLURM Command Line Utilities</a></li>
+        <li><a href="#custom-vbc-slurm-utilities">Custom VBC SLURM Utilities</a></li>
+      </ul>
+    </li>
+    <li><a href="#cbe-slurm">CBE SLURM</a>
+      <ul>
+        <li><a href="#available-resources">Available Resources</a></li>
+        <li><a href="#compute-node-types--hardware-resources">Compute Node Types &amp; Hardware Resources</a></li>
+        <li><a href="#node-preference">Node Preference</a></li>
+        <li><a href="#partitions">Partitions</a></li>
+        <li><a href="#resource-limits-qos">Resource Limits (QOS)</a></li>
+        <li><a href="#scheduling-policy">Scheduling Policy</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -304,8 +336,28 @@
 
 
 
-<li class="breadcrumb-item active" aria-current="page">
+
+
+
+
+
+
+<li class="breadcrumb-item" >
 	<a href="https://clip-hpc.github.io/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://clip-hpc.github.io/docs/cbe/">CBE</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://clip-hpc.github.io/docs/cbe/slurm/">Slurm</a>
 </li>
 
 	</ol>
@@ -313,109 +365,356 @@
 
             
 <div class="td-content">
-	<h1>Documentation</h1>
-        
+	<h1>Advanced SLURM Guide</h1>
+    <div class="lead">This document describes the SLURM configuration on CBE &amp; SLURM examples.</div>
+	       
+	<h2 id="slurm">SLURM</h2>
+<p>As a cluster resource manager (CPUs, memory, custom resources like SSDs, etc.), SLURM has three key functions. First, it allocates exclusive and/or non-exclusive access to resources (compute nodes) to users for some duration of time so they can perform work. Second, it provides a framework for starting, executing, and monitoring work (normally a job) on the set of allocated node or for parallel jobs on nodes. Finally, it arbitrates conflicting requests for resources by managing a queue of pending work.</p>
+<h3 id="slurm-terminology">SLURM Terminology</h3>
+<p>The entities managed by these SLURM include nodes, the compute resource in SLURM, <em>partitions</em>, which group nodes into logical sets, <em>jobs</em>, or allocations of resources assigned to a user for a specified amount of time, and <em>job steps</em>, which are sets of (possibly parallel) tasks within a job. Each job in the priority-ordered queue is allocated nodes within a single partition. Nodes can be members of more than node partition.</p>
+<p>Once a job is assigned one node or a set of nodes, the user is able to initiate work in the form of job steps in any configuration within the allocation. For instance, a single job step may be started that utilizes all nodes allocated to the job if supported by the software, or several job steps may independently use a portion of the allocation linke single or multiple cores on one compute node.</p>
+<h3 id="slurm-command-line-utilities">SLURM Command Line Utilities</h3>
+<p>Users interact with SLURM through command line utilities. In this section we just introduce the most important commands available to users while the use of these will be covered in a later section of this document.</p>
+<p>Please note that on CBE the BASH shell is configured to tab-complete the options available to these SLURM command line utilities.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Use Case</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>srun</td>
+<td>submitting jobs for execution and optionally controlling it interactively</td>
+<td><code>srun</code> is the user interface to accessing resources managed by SLURM. Users may utilize <code>srun</code> to allocate resources, submit batch jobs, run jobs interactively, attach to currently running jobs, or launch a set of parallel tasks (job step) for a running job.<br><code>srun</code> can either create an on demand resource selection before starting a possibly interactive command or launch tasks into an resource allocation crated by running salloc</td>
+</tr>
+<tr>
+<td>scancel</td>
+<td>terminating a pending or running job.</td>
+<td><code>scancel</code>terminates queued jobs or signals running jobs or job steps. The default signal is <code>SIGKILL</code>, which indicates a request to terminate the specified job or job step. <code>scancel</code> identifies the job(s) to be signaled through user specification of the SLURM job id, job step id, user name, partition name, and/or job state. If a job id is supplied, all job steps associated with the job are affected as well as the job and its resource allocation. If a job step id is supplied, only that job step is affected. scancel can only be executed by the job’s owner or a privileged user.</td>
+</tr>
+<tr>
+<td>squeue</td>
+<td>monitoring job queues</td>
+<td><code>squeue</code> reports the state of SLURM jobs. It can filter these jobs input specification of job state (RUN, PENDING, etc.), job id, user name, job name, etc. If no specification is supplied, the state of all pending and running jobs is reported. squeue also has a variety of sorting and output options</td>
+</tr>
+<tr>
+<td>sinfo</td>
+<td>show a summary of partition and node information</td>
+<td></td>
+</tr>
+<tr>
+<td>sbatch</td>
+<td>submit a job script for later execution. The script will typically contain one or more srun commands to launch parallel tasks</td>
+<td></td>
+</tr>
+<tr>
+<td>salloc</td>
+<td>allocate resources and potentially use them for srun</td>
+<td>allocates resources for a job in real time. Typically this is used to allocate resources and spawn a shell. The shell is then used to execute srun commands to launch serial or parallel tasks</td>
+</tr>
+<tr>
+<td>scontrol</td>
+<td>retrieve SLURM information on partitions, limits, jobs, etc</td>
+<td></td>
+</tr>
+<tr>
+<td>sattach</td>
+<td>attaches the terminal stdin/stdout to the job&rsquo;s stdin/stdout</td>
+<td>sattach allows a terminal to attach/reattach to a job&rsquo;s output to monitor it&rsquo;s output/errors and progression</td>
+</tr>
+<tr>
+<td>sprio</td>
+<td>reports priority of queueing jobs</td>
+<td>list output of individual components that affected priority/order in queue for waiting jobs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custom-vbc-slurm-utilities">Custom VBC SLURM Utilities</h3>
+<p>The following utilities are provided in addition to the SLURM commands as convenient shortcuts for quicker access to relevant information on the queue&rsquo;s status, available and used resources, limits configured etc.</p>
+<h4 id="slurm-ltcommandgt">slurm &lt;command&gt;</h4>
+<p>Show status of partitions, jobs, node usage history, priorties etc.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>adm_seren@clip-login-0 ~<span style="color:#ce5c00;font-weight:bold">]</span>$ slurm 
+
+Show or watch job queue:
+ slurm <span style="color:#ce5c00;font-weight:bold">[</span>watch<span style="color:#ce5c00;font-weight:bold">]</span> queue     show own <span style="color:#204a87">jobs</span>
+ slurm <span style="color:#ce5c00;font-weight:bold">[</span>watch<span style="color:#ce5c00;font-weight:bold">]</span> q &lt;user&gt;  show user<span style="color:#a40000">&#39;</span>s <span style="color:#204a87">jobs</span>
+ slurm <span style="color:#ce5c00;font-weight:bold">[</span>watch<span style="color:#ce5c00;font-weight:bold">]</span> quick     show quick overview of own <span style="color:#204a87">jobs</span>
+ slurm <span style="color:#ce5c00;font-weight:bold">[</span>watch<span style="color:#ce5c00;font-weight:bold">]</span> shorter   sort and compact entire queue by job size
+ slurm <span style="color:#ce5c00;font-weight:bold">[</span>watch<span style="color:#ce5c00;font-weight:bold">]</span> short     sort and compact entire queue by priority
+ slurm <span style="color:#ce5c00;font-weight:bold">[</span>watch<span style="color:#ce5c00;font-weight:bold">]</span> full      show everything
+ slurm <span style="color:#ce5c00;font-weight:bold">[</span>w<span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">[</span>q<span style="color:#000;font-weight:bold">|</span>qq<span style="color:#000;font-weight:bold">|</span>ss<span style="color:#000;font-weight:bold">|</span>s<span style="color:#000;font-weight:bold">|</span>f<span style="color:#ce5c00;font-weight:bold">]</span> shorthands <span style="color:#204a87;font-weight:bold">for</span> above!
+
+ slurm qos               show job service classes
+ slurm top <span style="color:#ce5c00;font-weight:bold">[</span>queue<span style="color:#000;font-weight:bold">|</span>all<span style="color:#ce5c00;font-weight:bold">]</span>   show summary of active users
+
+Show detailed information about jobs:
+ slurm prio <span style="color:#ce5c00;font-weight:bold">[</span>all<span style="color:#000;font-weight:bold">|</span>short<span style="color:#ce5c00;font-weight:bold">]</span>  show priority components
+ slurm j<span style="color:#000;font-weight:bold">|</span>job &lt;jobid&gt;     show everything <span style="color:#204a87;font-weight:bold">else</span>
+ slurm steps &lt;jobid&gt;     show memory usage of running srun job steps
+
+Show usage and fair-share values from accounting database:
+ slurm h<span style="color:#000;font-weight:bold">|</span><span style="color:#204a87">history</span> &lt;time&gt;  show <span style="color:#204a87">jobs</span> finished since, e.g. <span style="color:#4e9a06">&#34;1day&#34;</span> <span style="color:#ce5c00;font-weight:bold">(</span>default<span style="color:#ce5c00;font-weight:bold">)</span>
+ slurm shares
+
+Show nodes and resources in the cluster:
+ slurm p<span style="color:#000;font-weight:bold">|</span>partitions      all partitions
+ slurm n<span style="color:#000;font-weight:bold">|</span>nodes           all cluster nodes
+ slurm c<span style="color:#000;font-weight:bold">|</span>cpus            total cpu cores in use
+ slurm cpus &lt;partition&gt;  cores available to partition, allocated and free
+ slurm cpus <span style="color:#204a87">jobs</span>         cores/memory reserved by running <span style="color:#204a87">jobs</span>
+ slurm cpus queue        cores/memory required by pending <span style="color:#204a87">jobs</span>
+ slurm features          List features and GRES
+</code></pre></div><h4 id="jobinfo-ltjobidgt">jobinfo &lt;jobid&gt;</h4>
+<p>Shows status and resource consumption of jobs</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>adm_seren@clip-login-0 ~<span style="color:#ce5c00;font-weight:bold">]</span>$ jobinfo <span style="color:#0000cf;font-weight:bold">22</span>
+Name                : bash
+User                : adm_seren
+Partition           : c
+Nodes               : clip-c2-0
+Cores               : <span style="color:#0000cf;font-weight:bold">1</span>
+State               : COMPLETED
+Submit              : 2019-07-19T11:20:14
+Start               : 2019-07-19T11:20:14
+End                 : 2019-07-19T11:21:37
+Reserved walltime   : 08:00:00
+Used walltime       : 00:01:23
+Used CPU <span style="color:#204a87">time</span>       : --
+% User <span style="color:#ce5c00;font-weight:bold">(</span>Computation<span style="color:#ce5c00;font-weight:bold">)</span>:  0.00%
+% System <span style="color:#ce5c00;font-weight:bold">(</span>I/O<span style="color:#ce5c00;font-weight:bold">)</span>      : 30.19%
+Mem reserved        : 4G/core
+Max Mem used        : 2.32M <span style="color:#ce5c00;font-weight:bold">(</span>clip-c2-0<span style="color:#ce5c00;font-weight:bold">)</span>
+Max Disk Write      : 10.24K <span style="color:#ce5c00;font-weight:bold">(</span>clip-c2-0<span style="color:#ce5c00;font-weight:bold">)</span>
+Max Disk Read       : 1.99M <span style="color:#ce5c00;font-weight:bold">(</span>clip-c2-0<span style="color:#ce5c00;font-weight:bold">)</span>
+</code></pre></div><h2 id="cbe-slurm">CBE SLURM</h2>
+<h3 id="available-resources">Available Resources</h3>
+<p>The hardware resources available to CLIP instances differ from the resources available to the physical compute nodes running the virtual</p>
+<h3 id="compute-node-types--hardware-resources">Compute Node Types &amp; Hardware Resources</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Count</th>
+<th>Cores</th>
+<th>Memory</th>
+<th>Network</th>
+<th>GPUs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clip-c1-x</td>
+<td>39</td>
+<td>2 x 11</td>
+<td>85 GB</td>
+<td>100 Gbit/s</td>
+<td></td>
+</tr>
+<tr>
+<td>clip-c2-x</td>
+<td>120</td>
+<td>2 x 19</td>
+<td>170 GB</td>
+<td>100 Gbit/s</td>
+<td></td>
+</tr>
+<tr>
+<td>clip-m1-x</td>
+<td>1</td>
+<td>2 x 11</td>
+<td>4 TB</td>
+<td>100 Gbit/s</td>
+<td></td>
+</tr>
+<tr>
+<td>clip-m2-x</td>
+<td>3</td>
+<td>8 x 76</td>
+<td>85 GB</td>
+<td>100 Gbit/s</td>
+<td></td>
+</tr>
+<tr>
+<td>clip-g1-x</td>
+<td>2</td>
+<td>2 x 7</td>
+<td>170 GB</td>
+<td>100 Gbit/s</td>
+<td>8x NVIDIA P100 (12GB VRAM)</td>
+</tr>
+<tr>
+<td>clip-g2-x</td>
+<td>2</td>
+<td>2 x 15</td>
+<td>170 GB</td>
+<td>100 Gbit/s</td>
+<td>4x NVIDIA V100 (32GB VRAM)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="node-preference">Node Preference</h3>
+<p>Given that more than one node type could serve the limits as requested through jobs the nodes with the lower weight are more likely to be selected to execute the job. This implies that nodes requesting a lower amount of CPUs and memory will be preferably execute on nodes without GPUs, exrtra large memory, SSD drives, etc</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>clip-c1-x</th>
+<th>clip-c2-x</th>
+<th>clip-m1-x</th>
+<th>clip-m2-x</th>
+<th>clip-g1-x</th>
+<th>clip-g2-x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Weight</strong></td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="partitions">Partitions</h3>
+<p>On CLIP Batch Environment the nodes in the cluster are grouped in partitions. As already introduced partitions are a logical grouping of nodes of a particular quality or configuration. Within CLIP Batch Environment the following special nodes exist. The SLURM notion of partitions can be understood as queues within other resource managers like PBS, LSF, etc.</p>
+<h4 id="rationale">Rationale</h4>
+<p>SLURM partition configuration is done is such a way that jobs that could potentially run on any node type can be executed on any node of a given type. Ie all &lsquo;regular&rsquo; compute nodes are grouped into one partition, all &lsquo;high memory&rsquo; nodes are grouped in another partition and so on. Jobs that should or must be executed on a certain node type will need to explicitly either select the partition like the high memory node partition or the GPU partition.</p>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 823px">
+	<img class="card-img-top" src="/docs/cbe/slurm/cbe-nodes_hube6f268fa83de819f54b31abfd809e15_293759_813x0_resize_catmullrom_2.png" width="813" height="567">
 	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+CLIP Nodes
+</p>
+	</div>
 	
-
-<div class="pageinfo pageinfo-primary">
-<p>The documentation is under construction</p>
-
 </div>
-
-<p>This section is where the user documentation for the CLIP project lives - all the information your users need to understand and successfully use the CLIP provided infrastructure.</p>
-
-        <div class="section-index">
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/clip/">CLIP - OpenStack Cloud Platform Infrastructure Overview</a>
-                    </h5>
-                    <p>Information about the hardwe and ararchitecture CLIP</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/cbe/">Compute Batch Environent (CBE)</a>
-                    </h5>
-                    <p>CBE Access and Quick User Guide</p>
-                </div>
-            
-        
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/knowncaveats/">Known Caveats</a>
-                    </h5>
-                    <p>This page contains a list of known issues and how to solve or work around them</p>
-                </div>
-            
-        
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/xpra/">Web Access (XPRA)</a>
-                    </h5>
-                    <p>This page contains information about XPRA Web Access to CBE</p>
-                </div>
-            
-        
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/rstudio/">RStudio on CBE</a>
-                    </h5>
-                    <p>This page contains information about the RStudio service on CBE</p>
-                </div>
-            
-        
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/jupyterhub/">JupyterHub on CBE</a>
-                    </h5>
-                    <p>This page contains information about the JupyterHub service on CBE</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/bulktransfer/">Bulk-transfer of data</a>
-                    </h5>
-                    <p>This page contains information about how to transfer large amounts of data to/from CBE</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/changelog/">Change Notes</a>
-                    </h5>
-                    <p>This page contains the relevant, i.e. user-visible, changes that were performed during CBE&rsquo;s monthly maintenance in reverse chronological order.</p>
-                </div>
-            
-        
-            
-        
-    
-</div>
+<table>
+<thead>
+<tr>
+<th>Partition:</th>
+<th>c</th>
+<th>m</th>
+<th>g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Case</td>
+<td><strong>default partition</strong> where jobs can be submitted to</td>
+<td>special use partition for jobs that require from these nodes with are significantly enlarged main memory/RAM within compute nodes</td>
+<td>special use partition for jobs that profit from GPU accelerators within GPU nodes</td>
+</tr>
+<tr>
+<td>Resources</td>
+<td>Contains all regular high core count (clip-c2-x) and high clock (clip-c1-x) compute nodes</td>
+<td>Contains only nodes of the large  Memory Node type for large memory (clip-m2-x) and very large memory (clip-m1-x) nodes</td>
+<td>Contains only nodes of the GPU Node type with both GPU types (clip-g1-x &amp; clip-g2-x)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource-limits-qos">Resource Limits (QOS)</h3>
+<p>Within SLURM resource limitations are configured through named objects called QOS (Quality of Service). QOS objects specify limits in on resource like CPUs, memory, etc , and maximum execution time (wall time). QOS objects be attached to partitions and users may specify QOS objects on job submission (srun, salloc, sbatch).</p>
+<p>The CBE resource isolation is an configured to use Linux cgroups a feature that setups a resource &ldquo;jail&rdquo; enforced by the Kernel to guarantee resource and reduce job interference between jobs sharing and executing on the same compute node to a minimum.</p>
+<table>
+<thead>
+<tr>
+<th>QOS:</th>
+<th>short</th>
+<th>medium</th>
+<th>long</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Case</td>
+<td><strong>Default</strong> QOS (ie when no QOS is selected then this QOS is assumed)<br>Short running jobs with large resource limits (fast turnaround)</td>
+<td>&ldquo;Average&rdquo; jobs</td>
+<td>Very long running jobs with small resource limits</td>
+</tr>
+<tr>
+<td>Limits</td>
+<td>Dynamic (check out put of &lsquo;slurm qos&rsquo;)</td>
+<td>Dynamic (check out put of &lsquo;slurm qos&rsquo;)</td>
+<td>Dynamic (check out put of &lsquo;slurm qos&rsquo;)</td>
+</tr>
+<tr>
+<td>Walltime</td>
+<td>8 hours<br>(08:00:00)</td>
+<td>2 days<br>(2-00:00:00)</td>
+<td>14 days<br>(14-00:00:00)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scheduling-policy">Scheduling Policy</h3>
+<h4 id="backfill-strategy">Backfill Strategy</h4>
+<p>The order of job admission onto compute nodes is determined through the configured scheduling policy. CBE SURM is configured for the &ldquo;backfill&rdquo; strategy.  Without backfill scheduling, each partition is scheduled strictly in priority order, which typically results in significantly lower system utilization and responsiveness than otherwise possible. Backfill scheduling will start lower priority jobs if doing so does not delay the expected start time of any higher priority jobs. Since the expected start time of pending jobs depends upon the expected completion time of running jobs, reasonably accurate time limits are important for backfill scheduling to work well.</p>
+<p>Slurm&rsquo;s backfill scheduler takes into consideration every running job. It then considers pending jobs in priority order, determining when and where each will start, taking into consideration the possibility of resource requirements, etc. If the job under consideration can start immediately without impacting the expected start time of any higher priority job, then it does so. Otherwise the resources required by the job will be reserved during the job&rsquo;s expected execution time.</p>
+<p>The backfill plugin will set the expected start time for pending jobs. A job&rsquo;s expected start time can be seen using the <code>squeue --start command</code>.</p>
+<h4 id="prioritization">Prioritization</h4>
+<p>The prioritisation configuration uses the multifactor prioritisation configuration and the following factors are taken into consideration to compute the sequence in which job are admitted onto partitions/computing resources and how pending jobs are sorted in the queue.</p>
+<h5 id="factors">Factors</h5>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>What is it</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Age</td>
+<td>the length of time a job has been waiting in the queue, eligible to be scheduled</td>
+<td>In general, the longer a job waits in the queue, the larger its age factor grows. However, the age factor for a dependent job will not change while it waits for the job it depends on to complete. Also, the age factor will not change when scheduling is withheld for a job whose node or time limits exceed the cluster&rsquo;s current limits.</td>
+</tr>
+<tr>
+<td>Fair-Share (Usage)</td>
+<td>the fair-share factor serves to prioritize queued jobs such that those jobs charging accounts that are under-serviced are scheduled first, while jobs charging accounts that are over-serviced are scheduled when the machine would otherwise go idle.</td>
+<td>All jobs submitted at the time of this writing submit to the same account name (&ldquo;root&rdquo;) - this will change as soon as the cloud partition is in full configuration SLURM&rsquo;s fair-share factor is a floating point number between 0.0 and 1.0 that reflects the shares of a computing resource that a user has been allocated and the amount of computing resources the user&rsquo;s jobs have consumed. The higher the value, the higher is the placement in the queue of jobs waiting to be scheduled.</td>
+</tr>
+<tr>
+<td>Partition</td>
+<td>a factor associated with each partition - see the partition section of this document</td>
+<td>it will favor partitions that have the bulk of the nodes</td>
+</tr>
+<tr>
+<td>QOS</td>
+<td>a factor associated with each Quality Of Service - see the QOS section for the priority</td>
+<td>it will favor short running jobs that are submitted to the short qos</td>
+</tr>
+<tr>
+<td>Jos Size (TRES)</td>
+<td>Size of the job based on Trackable Resources (TRES) such as Core, Memory, etc</td>
+<td>Within the same partition and qos favor small jobs</td>
+</tr>
+</tbody>
+</table>
+<h5 id="formula">Formula</h5>
+<p>All of the factors in this formula are:</p>
+<pre><code>Job_priority =
+    (PriorityWeightAge) * (age_factor) +
+    (PriorityWeightFairshare) * (fair-share_factor) +
+    (PriorityWeightJobSize) * (job_size_factor) +
+    (PriorityWeightPartition) * (partition_factor) +
+    (PriorityWeightQOS) * (QOS_factor) +
+    SUM(TRES_weight_cpu * TRES_factor_cpu,
+        TRES_weight_&lt;type&gt; * TRES_factor_&lt;type&gt;,
+     ...)
+</code></pre><p>The usage (fair share) can be retrieved by running the <code>slurm</code> command with the option <code>shares</code>
+The priority of individual jobs can be trieved using the <code>sprio</code> command for waiting jobs.</p>
 
 	
 		<style>
@@ -482,6 +781,7 @@
 	<div class="text-muted mt-5 pt-3 border-top">Last modified April 20, 2020: <a  href="https://github.com/clip-hpc/wesbite//commit/8256e3a205498fd0043fc6c41525f9a25f17e803">Added documentation (8256e3a)</a>
 </div>
 </div>
+
 
           </main>
         </div>

@@ -7,7 +7,7 @@
 
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://clip-hpc.github.io/docs/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://clip-hpc.github.io/docs/cbe/index.xml">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,15 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Documentation | CLIP</title><meta property="og:title" content="Documentation" />
-<meta property="og:description" content="" />
+<title>Compute Batch Environent (CBE) | CLIP</title><meta property="og:title" content="Compute Batch Environent (CBE)" />
+<meta property="og:description" content="CBE Access and Quick User Guide
+" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://clip-hpc.github.io/docs/" />
+<meta property="og:url" content="https://clip-hpc.github.io/docs/cbe/" />
 
-<meta itemprop="name" content="Documentation">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Documentation"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="Compute Batch Environent (CBE)">
+<meta itemprop="description" content="CBE Access and Quick User Guide
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Compute Batch Environent (CBE)"/>
+<meta name="twitter:description" content="CBE Access and Quick User Guide
+"/>
 
 
 
@@ -139,7 +142,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Documentation</a>
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation</a>
   </li>
   <ul>
     <li class="collapse show" id="docs">
@@ -156,10 +159,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/clip/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">CLIP</a>
+    <a  href="/docs/clip/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">CLIP</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsclip">
+    <li class="collapse " id="docsclip">
       
       
       
@@ -179,7 +182,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/cbe/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">CBE</a>
+    <a  href="/docs/cbe/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">CBE</a>
   </li>
   <ul>
     <li class="collapse show" id="docscbe">
@@ -277,8 +280,8 @@
 
 
 
-<a href="https://github.com/clip-hpc/wesbite//edit/master/content/en/docs/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/clip-hpc/wesbite//issues/new?title=Documentation" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/clip-hpc/wesbite//edit/master/content/en/docs/CBE/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/clip-hpc/wesbite//issues/new?title=Compute%20Batch%20Environent%20%28CBE%29" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 
 
 <a href="https://github.com/clip-hpc/wesbite//issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
@@ -289,6 +292,28 @@
 
 
 
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#access">Access</a></li>
+    <li><a href="#brief-overview-of-the-cluster">Brief overview of the cluster</a></li>
+    <li><a href="#running-a-job-on-the-cluster">Running a job on the cluster</a>
+      <ul>
+        <li><a href="#slurm-terminology">SLURM Terminology</a></li>
+        <li><a href="#slurm-command-line-utilities">SLURM Command Line Utilities</a></li>
+      </ul>
+    </li>
+    <li><a href="#working-with-slurm----basics">Working with SLURM &ndash; Basics</a>
+      <ul>
+        <li><a href="#submission">Submission</a></li>
+        <li><a href="#monitoring-jobs">Monitoring Jobs</a></li>
+        <li><a href="#accessing-the-node-where-job-is-running">Accessing the node where job is running</a></li>
+        <li><a href="#cancelling-the-job">Cancelling the job</a></li>
+      </ul>
+    </li>
+    <li><a href="#learning-about-advances-slurm-topics">Learning about advances SLURM topics</a></li>
+  </ul>
+</nav>
 
 
 
@@ -304,8 +329,18 @@
 
 
 
-<li class="breadcrumb-item active" aria-current="page">
+
+
+
+<li class="breadcrumb-item" >
 	<a href="https://clip-hpc.github.io/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://clip-hpc.github.io/docs/cbe/">CBE</a>
 </li>
 
 	</ol>
@@ -313,17 +348,208 @@
 
             
 <div class="td-content">
-	<h1>Documentation</h1>
-        
+	<h1>Compute Batch Environent (CBE)</h1>
+        <div class="lead">CBE Access and Quick User Guide</div>
 	
 	
 
-<div class="pageinfo pageinfo-primary">
-<p>The documentation is under construction</p>
-
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Important notice!</h4>
+Scheduled preventive maintenance window on the CBE compute cluster:</p>
+<ul>
+<li><strong>EVERY first Thursday of every month at 10 a.m. until 10 a.m. on Friday</strong></li>
+</ul>
 </div>
 
-<p>This section is where the user documentation for the CLIP project lives - all the information your users need to understand and successfully use the CLIP provided infrastructure.</p>
+<p>This document is a short quick acces guide covering the most basic SLURM commands for CBE.</p>
+<h2 id="access">Access</h2>
+<p>You can reach the clusters via ssh using your institute account.</p>
+<p>The Login nodes are reachable via SSH from our network, if you want to connect from another location you have to <a href="https://docs.vbc.ac.at/books/it-department/page/network-access">connect to our Network via VPN first</a>.</p>
+<pre><code>ssh cbe.vbc.ac.at
+</code></pre>
+
+
+<div class="alert alert-info" role="alert">
+<h4 class="alert-heading">Login nodes</h4>
+CBE has two login nodes. ssh to <code>cbe.vbc.ac.at</code> address will take you in a round-robin fashion to one of them.
+The individual login nodes can be SSH&rsquo;d into via hostnames <code>clip-login-{0,1}.cbe.vbc.ac.at</code>.
+</div>
+
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Jobs on login nodes</h4>
+<strong>Never run your jobs directly on a login node</strong><br>
+The SLURM job submission system will distribute the workload among the machines, for more information about job submission, refer to the quick-start documentation below and our <a href="/docs/cbe/slurm">SLURM Advanced User&rsquo;s Guide</a>.
+</div>
+
+<h2 id="brief-overview-of-the-cluster">Brief overview of the cluster</h2>
+<p>Cluster in general consists of two types of nodes (with some subtypes included, see: <a href="/docs/CLIP">CLIP</a>.</p>
+<ul>
+<li>login nodes - 2x
+<ul>
+<li>To submit jobs, compile software for the cluster, check your job status, etc. you connect to the &lsquo;Login Nodes&rsquo; - they are your gateway to the cluster. These are nodes with additional software (e.g. development libraries) and these nodes are not used for computation.</li>
+</ul>
+</li>
+<li>compute nodes - up to 216x
+<ul>
+<li>Jobs submitted from login nodes get distributed (via. SLURM job scheduler) to compute nodes where they execute. Direct ssh access to compute nodes has beed disabled to prevent (un)intentional interference with running jobs</li>
+</ul>
+</li>
+</ul>
+<p>To provide environment for efficient work, CBE cluster also provides:</p>
+<ul>
+<li>several special storage areas, see <a href="/docs/cbe/storage">CBE Storage User&rsquo;s Guide</a></li>
+<li>bundle of preinstalled software, see <a href="/docs/cbe/software">CBE Application and Software User&rsquo;s Guide</a></li>
+</ul>
+<h2 id="running-a-job-on-the-cluster">Running a job on the cluster</h2>
+<p>CBE utilizes <a href="https://slurm.schedmd.com/quickstart.html">SLURM</a>:  &ldquo;open source, fault-tolerant, and highly scalable cluster management and job scheduling system&rdquo;</p>
+<p>As a cluster resource manager (resources being: CPUs, memory, custom resources like SSDs, etc.), SLURM has three key functions:</p>
+<ol>
+<li>Allocates exclusive and/or non-exclusive access to resources (compute nodes) to users for some duration of time so they can perform work.</li>
+<li>Provides a framework for starting, executing, and monitoring work (normally a job) on the set of allocated node or for parallel jobs on nodes.</li>
+<li>Finally, it arbitrates conflicting requests for resources by managing a queue of pending work.</li>
+</ol>
+<h3 id="slurm-terminology">SLURM Terminology</h3>
+<p>The entities managed by these SLURM include <em>nodes</em>, the compute resource in SLURM, <em>partitions</em>, which group nodes into logical disjoint sets, <em>jobs</em>, or allocations of resources assigned to a user for a specified amount of time, and <em>job steps</em>, which are sets of (possibly parallel) tasks within a job. Each job in the priority-ordered queue is allocated nodes within a single partition.</p>
+<p>The notion of array jobs which is a feature useful for issuing big numbers of jobs with common characteristics is supported through the concept of job steps.</p>
+<p>Once a job is assigned one node or a set of nodes, the user is able to initiate work in the form of job steps in any configuration within the allocation. For instance, a single job step may be started that utilizes all nodes allocated to the job, or several job steps may independently use a portion of the allocation.</p>
+<h3 id="slurm-command-line-utilities">SLURM Command Line Utilities</h3>
+<p>Users interact with SLURM through four command line utilities</p>
+<ul>
+<li><strong>salloc</strong> is used to allocate resources for a job in real time. Typically this is used to allocate resources and spawn a shell. The shell is then used to execute srun commands to launch parallel tasks.</li>
+<li><strong>sattach</strong> is used to attach standard input, output, and error plus signal capabilities to a currently running job or job step. One can attach to and detach from jobs multiple times.</li>
+<li><strong>sbatch</strong> is used to submit a job script for later execution. The script will typically contain one or more srun commands to launch parallel tasks.</li>
+<li><strong>sbcast</strong> is used to transfer a file from local disk to local disk on the nodes allocated to a job. This can be used to effectively use diskless compute nodes or provide improved performance relative to a shared file system.</li>
+<li><strong>scancel</strong> is used to cancel a pending or running job or job step. It can also be used to send an arbitrary signal to all processes associated with a running job or job step.</li>
+<li><strong>scontrol</strong> is the administrative tool used to view and/or modify SLURM state. Note that many scontrol commands can only be executed as user root.</li>
+<li><strong>sinfo</strong> reports the state of partitions and nodes managed by SLURM. It has a wide variety of filtering, sorting, and formatting options.</li>
+<li><strong>smap</strong> reports state information for jobs, partitions, and nodes managed by SLURM, but graphically displays the information to reflect network topology.</li>
+<li><strong>squeue</strong> reports the state of jobs or job steps. It has a wide variety of filtering, sorting, and formatting options. By default, it reports the running jobs in priority order and then the pending jobs in priority order.</li>
+<li><strong>srun</strong> is used to submit a job for execution or initiate job steps in real time. srun has a wide variety of options to specify resource requirements, including: minimum and maximum node count, processor count, specific nodes to use or not use, and specific node characteristics (so much memory, disk space, certain required features, etc.). A job can contain multiple job steps executing sequentially or in parallel on independent or shared nodes within the job&rsquo;s node allocation.</li>
+</ul>
+<h2 id="working-with-slurm----basics">Working with SLURM &ndash; Basics</h2>
+<p>Every job in SLURM is described with an sbatch script. In essence, it is a regular shell script augmented with #SBATCH stanzas, as you will see below.</p>
+<p>This is an example submission script that shows basic SLURM concepts:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#!/usr/bin/env bash
+</span><span style="color:#8f5902;font-style:italic"></span>
+<span style="color:#8f5902;font-style:italic"># Lines beginning with #SBATCH are instructions for SLURM, this line is a comment :)</span>
+<span style="color:#8f5902;font-style:italic"># For example:</span>
+
+<span style="color:#8f5902;font-style:italic"># This job requests from SLURM to allocate 1 node.</span>
+<span style="color:#8f5902;font-style:italic">#SBATCH --nodes=1</span>
+<span style="color:#8f5902;font-style:italic"># On that node, it will run 4 tasks, each with 1 core and 1 GB of memory.</span>
+<span style="color:#8f5902;font-style:italic">#SBATCH --ntasks=4</span>
+<span style="color:#8f5902;font-style:italic">#SBATCH --cpus-per-task=1</span>
+<span style="color:#8f5902;font-style:italic">#SBATCH --mem-per-cpu=1G</span>
+<span style="color:#8f5902;font-style:italic"># Running time will be 2 minutes#SBATCH --time=0-00:02:00</span>
+<span style="color:#8f5902;font-style:italic"># And it will place the output of the commands into my.stdout file</span>
+<span style="color:#8f5902;font-style:italic">#SBATCH --output=my.stdout</span>
+
+<span style="color:#8f5902;font-style:italic"># Total allocation will be: 4 cores and 4GB of memory on 1 node.</span>
+
+<span style="color:#8f5902;font-style:italic"># Executing a command like this will cause it to run once in the whole allocation:</span>
+/bin/hostname
+
+<span style="color:#8f5902;font-style:italic"># These commands will be run by each task (4 times total)</span>
+<span style="color:#8f5902;font-style:italic"># -l flag prepends the task number to each line of output</span>
+srun -l /bin/hostname
+srun -l /bin/pwd
+
+<span style="color:#8f5902;font-style:italic"># an we will sleep for 60 seconds before exiting</span>
+sleep <span style="color:#0000cf;font-weight:bold">60</span>
+<span style="color:#8f5902;font-style:italic"># after job is finished, see file my.stdout for results</span>
+</code></pre></div><h3 id="submission">Submission</h3>
+<p>Scripts are submitted to SLURM with sbatch command:</p>
+<pre><code>sbatch simple.sbatch
+Submitted batch job 145843
+</code></pre><p>After submission, SLURM will evaluate the script, check if there are enough available resources (cpu, memory, nodes, etc.) on the cluster to satisfy the requests from the script and if there are, place the job on the nodes for execution.</p>
+<p>Number in red is the SLURM_JOB_ID, incrementally increasing unique number slurm assigns to every job.</p>
+<p>(see later: cancelling the job)</p>
+<p>Interactive sessions can be started the following way</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>adm_seren@clip-login-1 ~<span style="color:#ce5c00;font-weight:bold">]</span>$ srun --pty bash
+<span style="color:#ce5c00;font-weight:bold">[</span>adm_seren@clip-c2-6 ~<span style="color:#ce5c00;font-weight:bold">]</span>$ hostname
+clip-c2-6
+</code></pre></div><h3 id="monitoring-jobs">Monitoring Jobs</h3>
+<p>All the jobs running on the cluster, also the ones that are waiting in the &ldquo;queue&rdquo; for free resources can be observed with the squeue command:</p>
+<p>without any flags, it will display all the jobs on the cluster:</p>
+<pre><code>[adm_seren@clip-login-1 ~]$ squeue 
+JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          c     bash marek.wo  R       0:51      1 clip-c2-0
+          c     bash adm_fora  R      30:20      1 clip-c2-0
+</code></pre><p>Or, if you are interested only in your jobs, add -u your_username switch:</p>
+<pre><code>[adm_seren@clip-login-1 ~]$ squeue -u adm_forai
+JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+7         c     bash adm_fora  R      31:08      1 clip-c2-0
+</code></pre><p>Another command that allows you to see more details about the running job is scontrol:</p>
+<pre><code>[adm_seren@clip-login-1 ~]$ scontrol show job 10
+JobId=10 JobName=bash
+  UserId=marek.wolczynski(59539) GroupId=brennecke.grp(2007) MCS_label=N/A
+  Priority=1 Nice=0 Account=bre QOS=c_short
+  JobState=RUNNING Reason=None Dependency=(null)
+  Requeue=1 Restarts=0 BatchFlag=0 Reboot=0 ExitCode=0:0
+  RunTime=00:02:08 TimeLimit=08:00:00 TimeMin=N/A
+  SubmitTime=2019-07-19T10:34:13 EligibleTime=2019-07-19T10:34:13
+  AccrueTime=Unknown
+  StartTime=2019-07-19T10:34:13 EndTime=2019-07-19T18:34:13 Deadline=N/A
+  PreemptTime=None SuspendTime=None SecsPreSuspend=0
+  LastSchedEval=2019-07-19T10:34:13
+  Partition=c AllocNode:Sid=clip-login-1:6396
+  ReqNodeList=(null) ExcNodeList=(null)
+  NodeList=clip-c2-0
+  BatchHost=clip-c2-0
+  NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*
+  TRES=cpu=4,mem=16G,node=1,billing=4
+  Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+  MinCPUsNode=4 MinMemoryCPU=4G MinTmpDiskNode=0
+  Features=(null) DelayBoot=00:00:00
+  OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+  Command=bash
+  WorkDir=/users/marek.wolczynski
+  Power=
+</code></pre><h3 id="accessing-the-node-where-job-is-running">Accessing the node where job is running</h3>
+<p>If you want to check what the job is actually doing on the compute node, simply ssh into the specific compute node where your is running</p>
+<pre><code>[adm_seren@clip-login-0 ~]$ squeue -u adm_seren
+            JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                11         c     bash adm_sere  R       0:17      1 clip-c2-0
+[adm_seren@clip-login-0 ~]$ ssh clip-c2-0
+Warning: Permanently added 'clip-c2-0,172.24.96.12' (ECDSA) to the list of known hosts.
+Last login: Thu Jul 18 22:48:26 2019 from clip-login-1
+[adm_seren@clip-c2-0 ~]$ ps
+  PID TTY          TIME CMD
+42470 pts/3    00:00:00 bash
+42856 pts/3    00:00:00 ps
+[adm_seren@clip-c2-0 ~]$
+</code></pre><h3 id="cancelling-the-job">Cancelling the job</h3>
+<p>If for some reason you wish to cancel submitted job, scancel is the command.</p>
+<p>It can cancel all the jobs from the user with -u your_username or you can target a specific job with the SLURM_JOB_ID number.</p>
+<p>e.g. you wish to cancel ALL your submitted jobs</p>
+<pre><code>[adm_seren@clip-c2-0 ~]$ squeue -u adm_seren
+            JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                13         c     bash adm_sere  R       0:47      1 clip-c2-0
+                12         c     bash adm_sere  R       0:50      1 clip-c2-0
+                11         c     bash adm_sere  R       3:10      1 clip-c2-0
+[adm_seren@clip-c2-0 ~]$ scancel -v -u adm_seren
+scancel: Consumable Resources (CR) Node Selection plugin loaded with argument 20
+scancel: Cray node selection plugin loaded
+scancel: Linear node selection plugin loaded with argument 20
+scancel: Serial Job Resource Selection plugin loaded with argument 20
+scancel: Terminating job 11
+scancel: Terminating job 12
+scancel: Terminating job 13
+srun: Force Terminated job 11
+[adm_seren@clip-c2-0 ~]$ srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: clip-c2-0: task 0: Killed
+[adm_seren@clip-login-1 ~]$
+</code></pre><p>or, just one specific job (notice, other two are left running):</p>
+<pre><code>[adm_seren@clip-login-1 ~]$ squeue -u adm_seren
+            JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                17         c    sleep adm_sere  R       0:24      1 clip-c2-0
+[adm_seren@clip-login-1 ~]$ scancel -v 17
+scancel: Terminating job 17
+[adm_seren@clip-login-1 ~]$
+</code></pre><h2 id="learning-about-advances-slurm-topics">Learning about advances SLURM topics</h2>
+<p>This quick start guide should get you started, and if you wish to learn about more advanced slurm topics, go to our: <a href="">SLURM Advanced User&rsquo;s Guide</a></p>
 
         <div class="section-index">
     
@@ -333,20 +559,15 @@
     <hr class="panel-line">
         
             
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/clip/">CLIP - OpenStack Cloud Platform Infrastructure Overview</a>
-                    </h5>
-                    <p>Information about the hardwe and ararchitecture CLIP</p>
-                </div>
+        
             
         
             
                 <div class="entry">
                     <h5>
-                        <a href="/docs/cbe/">Compute Batch Environent (CBE)</a>
+                        <a href="/docs/cbe/software/">Application and Software on CBE</a>
                     </h5>
-                    <p>CBE Access and Quick User Guide</p>
+                    <p>This document describes the installed software and the environment modules system.</p>
                 </div>
             
         
@@ -355,9 +576,9 @@
             
                 <div class="entry">
                     <h5>
-                        <a href="/docs/knowncaveats/">Known Caveats</a>
+                        <a href="/docs/cbe/storage/">Storage on CBE</a>
                     </h5>
-                    <p>This page contains a list of known issues and how to solve or work around them</p>
+                    <p>This document describes the storage locations and options for the CBE compute cluster.</p>
                 </div>
             
         
@@ -366,9 +587,9 @@
             
                 <div class="entry">
                     <h5>
-                        <a href="/docs/xpra/">Web Access (XPRA)</a>
+                        <a href="/docs/cbe/slurm/">Advanced SLURM Guide</a>
                     </h5>
-                    <p>This page contains information about XPRA Web Access to CBE</p>
+                    <p>This document describes the SLURM configuration on CBE &amp; SLURM examples.</p>
                 </div>
             
         
@@ -377,39 +598,16 @@
             
                 <div class="entry">
                     <h5>
-                        <a href="/docs/rstudio/">RStudio on CBE</a>
+                        <a href="/docs/cbe/interactive/">Interactive workloads</a>
                     </h5>
-                    <p>This page contains information about the RStudio service on CBE</p>
+                    <p>This document describes how to submit interactive workloads</p>
                 </div>
             
         
             
         
             
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/jupyterhub/">JupyterHub on CBE</a>
-                    </h5>
-                    <p>This page contains information about the JupyterHub service on CBE</p>
-                </div>
-            
         
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/bulktransfer/">Bulk-transfer of data</a>
-                    </h5>
-                    <p>This page contains information about how to transfer large amounts of data to/from CBE</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/changelog/">Change Notes</a>
-                    </h5>
-                    <p>This page contains the relevant, i.e. user-visible, changes that were performed during CBE&rsquo;s monthly maintenance in reverse chronological order.</p>
-                </div>
             
         
             
