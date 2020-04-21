@@ -1117,5 +1117,65 @@ The computer from which you initiated the transfer is not in the data path and c
       </description>
     </item>
     
+    <item>
+      <title>Docs: Change Notes</title>
+      <link>https://clip-hpc.github.io/docs/changelog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clip-hpc.github.io/docs/changelog/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+CBE maintenance is scheduled on the first Thursday of every month from 10 a.m. until 10 a.m. the next day. A reservation will be placed on the entire system so that all job queues will be empty when the system goes down. Scheduled maintenance periods will be announced in the Message of the Day (MOTD) when logging into CBE ahead of time as well as via e-mail.
+&lt;/div&gt;
+
+&lt;h2 id=&#34;2020-04-16&#34;&gt;2020-04-16&lt;/h2&gt;
+&lt;h3 id=&#34;rstudio&#34;&gt;Rstudio&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update to version RStudio Server Pro 1.2.5033-1, &amp;ldquo;Orange Blossom&amp;rdquo; (b80dc554).&lt;/li&gt;
+&lt;li&gt;Rstudio session will no longer read ~/.bashrc or ~/.bash_profile.&lt;/li&gt;
+&lt;li&gt;Support for multiple versions of R (currently 3.5.1 and 3.6.0, bare or with texlive+bioconductor)&lt;/li&gt;
+&lt;li&gt;The default R version can be changed by the user and is remembered when restoring an R project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2020-03-18&#34;&gt;2020-03-18&lt;/h2&gt;
+&lt;h3 id=&#34;interactive-reservation&#34;&gt;interactive reservation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;added a recurring reservation for interactive jobs (Mon-Fri 0900-1700)&lt;/li&gt;
+&lt;li&gt;RStudio, Jupyterhub and XPRA jobs will submit on this reservation&lt;/li&gt;
+&lt;li&gt;See documentation: Interactive workloads&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2019-12-05&#34;&gt;2019-12-05&lt;/h2&gt;
+&lt;h3 id=&#34;xpra&#34;&gt;XPRA&lt;/h3&gt;
+&lt;p&gt;Web-based graphical cluster access via XPRA is now available on CBE, similar to the II-2 cluster before. Sessions can be launched from the &lt;a href=&#34;https://it.vbc.ac.at/clip/cbe/xpra&#34;&gt;IT website&lt;/a&gt; while some documentation is available &lt;a href=&#34;https://docs.vbc.ac.at/books/scientific-computing/page/web-access-%28xpra%29-b1a&#34;&gt;here&lt;/a&gt;. Currently available applications include Rstudio, Fiji, IGV Genome Browser and generic XTerm. The latter of course permits the invocation of other tools with graphical user interfaces like SPHIRE or Relion after loading the respective modules. Note that CBE access is required to run XPRA sessions, for which you can apply &lt;a href=&#34;https://jira.vbc.ac.at/servicedesk/customer/portal/1/create/13&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;rstudio-1&#34;&gt;Rstudio&lt;/h3&gt;
+&lt;p&gt;As mentioned above, access to Rstudio is provided through XPRA. Please see the Links in the paragraph above. Rstudio documentation is available here.&lt;/p&gt;
+&lt;h3 id=&#34;jupyterhub&#34;&gt;JupyterHub&lt;/h3&gt;
+&lt;p&gt;JupyterHub has also been installed recently and can be accessed here. Users can specify job types with different resource configurations (memory, GPUs, runtime) and choose from a Conda-based environment for interactive work or an environment based on CBE’s Python modules for prototyping batch jobs. Note that CBE access is required to use JupyterHub, for which you can apply here.&lt;/p&gt;
+&lt;h3 id=&#34;singularity&#34;&gt;Singularity&lt;/h3&gt;
+&lt;p&gt;The Singularity module available on CBE was upgraded from version 3.2.1 to version 3.4.1. The earlier version is no longer available. Please remember to update your scripts accordingly. Also note that due to a software bug, we had to unset $SINGULARITY_TMPDIR which used to point to your user home directory in the previous version.
+Building custom Singularity images is now facilitated with a dedicated Jenkins build pipeline and our own Singularity registry to which the images are pushed. As individual setup is necessary, interested users are kindly asked to open an HPC ticket here in order to make an appointment.&lt;/p&gt;
+&lt;h2 id=&#34;2019-10-03&#34;&gt;2019-10-03&lt;/h2&gt;
+&lt;h3 id=&#34;qos-limits&#34;&gt;QoS Limits&lt;/h3&gt;
+&lt;p&gt;The QoS Limits for the GPU ‘g’ partition have been adjusted now to include all nodes with GPUs for medium, long and short. The effectively means that the limits are set to 100% of the resources. We will adjust (lower) the limits once more applications on the GPU nodes are running.&lt;/p&gt;
+&lt;p&gt;The QoS Limits for large memory nodes ‘m’ have been adjusted now to include all the memory available in the medium, long and short QoS. This will be adjusted on a per need basis, but since these machines are designed for large memory challenges it makes more sense to not limit the resources for the time being.&lt;/p&gt;
+&lt;h3 id=&#34;login-nodes&#34;&gt;Login Nodes&lt;/h3&gt;
+&lt;p&gt;The individual login nodes that are round-robined when SSHing into &lt;code&gt;cbe.vbc.ac.at&lt;/code&gt; have now properly exposed DNS names (relevant for reconnecting to your tmux session et al) and  are reachable as &lt;code&gt;clip-login-{0,1}.cbe.vbc.ac.at&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;environment-modules&#34;&gt;Environment Modules&lt;/h3&gt;
+&lt;p&gt;An issue that involved resetting the &lt;code&gt;$MODULEPATH&lt;/code&gt; environment variable causing the list of available modules to be empty upon running a login shell either through tmux or manually was resolved and modules are properly initialised and usable from login shells and/or tmux sessions.&lt;/p&gt;
+&lt;h3 id=&#34;announcement-of-maintenance&#34;&gt;Announcement of Maintenance&lt;/h3&gt;
+&lt;p&gt;We are now rendering the upcoming maintenance windows and reservations on the machine in the Message of the Day (MOTD) upon login. For the next windows we will announce this explicitly trough email in addition to the MOTD.&lt;/p&gt;
+&lt;h3 id=&#34;singularity-1&#34;&gt;Singularity&lt;/h3&gt;
+&lt;p&gt;Due to a security vulnerability in the Singularity container run time environment the version and the module for 3.1.0 have been removed from the system and the only usable version in place is 3.2.0.&lt;/p&gt;
+&lt;p&gt;The Singularity &lt;code&gt;$SINGULARITY_TMPDIR&lt;/code&gt; variables now defined system wide to point to your home directory for every user, this should remove some of the potential issues involved in converting singularity image formats.&lt;/p&gt;
+&lt;h3 id=&#34;software-trees&#34;&gt;Software Trees&lt;/h3&gt;
+&lt;p&gt;The system now offers two additional software trees named &lt;code&gt;build-env/i2020&lt;/code&gt; and &lt;code&gt;build-env/f2020&lt;/code&gt; – from now on all software trees will be prefix’ed with either ‘I’ or ‘f’ to indicate whether they are based on the Intel compiler toolchain (‘I’) or on the GNU gcc based toolchain (‘f’). &lt;code&gt;The build-env/i2020&lt;/code&gt; contains the commercial Intel compiler, Intel MPI, Intel accelerated numerical libraries (MKL). You can easily switch between software trees by loading the appropriate build-env module. The existing and default software tree stays in place as is.&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>
