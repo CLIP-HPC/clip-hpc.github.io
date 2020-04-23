@@ -467,24 +467,24 @@ Submitted batch job 145843
 <p>Number in red is the SLURM_JOB_ID, incrementally increasing unique number slurm assigns to every job.</p>
 <p>(see later: cancelling the job)</p>
 <p>Interactive sessions can be started the following way</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>adm_seren@clip-login-1 ~<span style="color:#ce5c00;font-weight:bold">]</span>$ srun --pty bash
-<span style="color:#ce5c00;font-weight:bold">[</span>adm_seren@clip-c2-6 ~<span style="color:#ce5c00;font-weight:bold">]</span>$ hostname
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>john.doe@clip-login-1 ~<span style="color:#ce5c00;font-weight:bold">]</span>$ srun --pty bash
+<span style="color:#ce5c00;font-weight:bold">[</span>john.doe@clip-c2-6 ~<span style="color:#ce5c00;font-weight:bold">]</span>$ hostname
 clip-c2-6
 </code></pre></div><h3 id="monitoring-jobs">Monitoring Jobs</h3>
 <p>All the jobs running on the cluster, also the ones that are waiting in the &ldquo;queue&rdquo; for free resources can be observed with the squeue command:</p>
 <p>without any flags, it will display all the jobs on the cluster:</p>
-<pre><code>[adm_seren@clip-login-1 ~]$ squeue 
+<pre><code>[john.doe@clip-login-1 ~]$ squeue 
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          c     bash marek.wo  R       0:51      1 clip-c2-0
-          c     bash adm_fora  R      30:20      1 clip-c2-0
+10          c     bash jane.doe  R       0:51      1 clip-c2-0
+ 7          c     bash john.doe  R      30:20      1 clip-c2-0
 </code></pre><p>Or, if you are interested only in your jobs, add -u your_username switch:</p>
-<pre><code>[adm_seren@clip-login-1 ~]$ squeue -u adm_forai
+<pre><code>[john.doe@clip-login-1 ~]$ squeue -u john.doe
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-7         c     bash adm_fora  R      31:08      1 clip-c2-0
+7         c     bash john.doe  R      31:08      1 clip-c2-0
 </code></pre><p>Another command that allows you to see more details about the running job is scontrol:</p>
-<pre><code>[adm_seren@clip-login-1 ~]$ scontrol show job 10
+<pre><code>[john.doe@clip-login-1 ~]$ scontrol show job 10
 JobId=10 JobName=bash
-  UserId=marek.wolczynski(59539) GroupId=brennecke.grp(2007) MCS_label=N/A
+  UserId=jane.doe(59539) GroupId=jane.grp(2007) MCS_label=N/A
   Priority=1 Nice=0 Account=bre QOS=c_short
   JobState=RUNNING Reason=None Dependency=(null)
   Requeue=1 Restarts=0 BatchFlag=0 Reboot=0 ExitCode=0:0
@@ -505,31 +505,31 @@ JobId=10 JobName=bash
   Features=(null) DelayBoot=00:00:00
   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
   Command=bash
-  WorkDir=/users/marek.wolczynski
+  WorkDir=/users/jane.doe
   Power=
 </code></pre><h3 id="accessing-the-node-where-job-is-running">Accessing the node where job is running</h3>
 <p>If you want to check what the job is actually doing on the compute node, simply ssh into the specific compute node where your is running</p>
-<pre><code>[adm_seren@clip-login-0 ~]$ squeue -u adm_seren
+<pre><code>[john.doe@clip-login-0 ~]$ squeue -u john.doe
             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                11         c     bash adm_sere  R       0:17      1 clip-c2-0
-[adm_seren@clip-login-0 ~]$ ssh clip-c2-0
+                11         c     bash john.doe  R       0:17      1 clip-c2-0
+[john.doe@clip-login-0 ~]$ ssh clip-c2-0
 Warning: Permanently added 'clip-c2-0,172.24.96.12' (ECDSA) to the list of known hosts.
 Last login: Thu Jul 18 22:48:26 2019 from clip-login-1
-[adm_seren@clip-c2-0 ~]$ ps
+[john.doe@clip-c2-0 ~]$ ps
   PID TTY          TIME CMD
 42470 pts/3    00:00:00 bash
 42856 pts/3    00:00:00 ps
-[adm_seren@clip-c2-0 ~]$
+[john.doe@clip-c2-0 ~]$
 </code></pre><h3 id="cancelling-the-job">Cancelling the job</h3>
 <p>If for some reason you wish to cancel submitted job, scancel is the command.</p>
 <p>It can cancel all the jobs from the user with -u your_username or you can target a specific job with the SLURM_JOB_ID number.</p>
 <p>e.g. you wish to cancel ALL your submitted jobs</p>
-<pre><code>[adm_seren@clip-c2-0 ~]$ squeue -u adm_seren
+<pre><code>[john.doe@clip-c2-0 ~]$ squeue -u john.doe
             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                13         c     bash adm_sere  R       0:47      1 clip-c2-0
-                12         c     bash adm_sere  R       0:50      1 clip-c2-0
-                11         c     bash adm_sere  R       3:10      1 clip-c2-0
-[adm_seren@clip-c2-0 ~]$ scancel -v -u adm_seren
+                13         c     bash john.doe  R       0:47      1 clip-c2-0
+                12         c     bash john.doe  R       0:50      1 clip-c2-0
+                11         c     bash john.doe  R       3:10      1 clip-c2-0
+[john.doe@clip-c2-0 ~]$ scancel -v -u john.doe
 scancel: Consumable Resources (CR) Node Selection plugin loaded with argument 20
 scancel: Cray node selection plugin loaded
 scancel: Linear node selection plugin loaded with argument 20
@@ -538,16 +538,16 @@ scancel: Terminating job 11
 scancel: Terminating job 12
 scancel: Terminating job 13
 srun: Force Terminated job 11
-[adm_seren@clip-c2-0 ~]$ srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[john.doe@clip-c2-0 ~]$ srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
 srun: error: clip-c2-0: task 0: Killed
-[adm_seren@clip-login-1 ~]$
+[john.doe@clip-login-1 ~]$
 </code></pre><p>or, just one specific job (notice, other two are left running):</p>
-<pre><code>[adm_seren@clip-login-1 ~]$ squeue -u adm_seren
+<pre><code>[john.doe@clip-login-1 ~]$ squeue -u john.doe
             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                17         c    sleep adm_sere  R       0:24      1 clip-c2-0
-[adm_seren@clip-login-1 ~]$ scancel -v 17
+                17         c    sleep john.doe  R       0:24      1 clip-c2-0
+[john.doe@clip-login-1 ~]$ scancel -v 17
 scancel: Terminating job 17
-[adm_seren@clip-login-1 ~]$
+[john.doe@clip-login-1 ~]$
 </code></pre><h2 id="learning-about-advances-slurm-topics">Learning about advances SLURM topics</h2>
 <p>This quick start guide should get you started, and if you wish to learn about more advanced slurm topics, go to our: <a href="">SLURM Advanced User&rsquo;s Guide</a></p>
 
@@ -677,7 +677,7 @@ scancel: Terminating job 17
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified April 22, 2020: <a  href="https://github.com/clip-hpc/wesbite//commit/efec4bd5b5b98fd230f007afd40c0ac5b173b7d9">Fix typo (efec4bd)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified April 23, 2020: <a  href="https://github.com/clip-hpc/wesbite//commit/3b65a1f7ad88106588f380bc3c6cb87b1bd197ac">Replaced usernames with john/jane.doe (3b65a1f)</a>
 </div>
 </div>
 

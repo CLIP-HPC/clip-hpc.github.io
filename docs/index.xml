@@ -396,7 +396,7 @@ usage: /software/system/utils/stage source_folder destination_folder
 &lt;p&gt;The following utilities are provided in addition to the SLURM commands as convenient shortcuts for quicker access to relevant information on the queue&amp;rsquo;s status, available and used resources, limits configured etc.&lt;/p&gt;
 &lt;h4 id=&#34;slurm-ltcommandgt&#34;&gt;slurm &amp;lt;command&amp;gt;&lt;/h4&gt;
 &lt;p&gt;Show status of partitions, jobs, node usage history, priorties etc.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;adm_seren@clip-login-0 ~&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;$ slurm 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;john.doe@clip-login-0 ~&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;$ slurm 
 
 Show or watch job queue:
  slurm &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;watch&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt; queue     show own &lt;span style=&#34;color:#204a87&#34;&gt;jobs&lt;/span&gt;
@@ -429,9 +429,9 @@ Show nodes and resources in the cluster:
  slurm features          List features and GRES
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;jobinfo-ltjobidgt&#34;&gt;jobinfo &amp;lt;jobid&amp;gt;&lt;/h4&gt;
 &lt;p&gt;Shows status and resource consumption of jobs&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;adm_seren@clip-login-0 ~&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;$ jobinfo &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;22&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;john.doe@clip-login-0 ~&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;$ jobinfo &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;22&lt;/span&gt;
 Name                : bash
-User                : adm_seren
+User                : john.doe
 Partition           : c
 Nodes               : clip-c2-0
 Cores               : &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;
