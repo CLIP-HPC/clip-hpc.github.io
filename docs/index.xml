@@ -680,7 +680,7 @@ The priority of individual jobs can be trieved using the &lt;code&gt;sprio&lt;/c
     </item>
     
     <item>
-      <title>Docs: RStudio on CBE</title>
+      <title>Docs: RStudio on CLIP</title>
       <link>https://clip-hpc.github.io/docs/rstudio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -794,7 +794,7 @@ srun -n &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt
     </item>
     
     <item>
-      <title>Docs: JupyterHub on CBE</title>
+      <title>Docs: JupyterHub on CLIP</title>
       <link>https://clip-hpc.github.io/docs/jupyterhub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -802,7 +802,187 @@ srun -n &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt
       <description>
         
         
-        
+        &lt;h2 id=&#34;basic-guide&#34;&gt;Basic Guide&lt;/h2&gt;
+&lt;p&gt;For interactive data analysis we support JupyterHub on CBE.&lt;br&gt;
+Our JupyterHub service allows you to spawn one or more JupyterLab sessions that are executed on the CBE compute nodes.   Inside this JupyterLab session the user can start Jupyter notebooks that either run an R or Python kernel and execute the code that is stored inside the notebooks. For more information about the Jupyter project refer to the &lt;a href=&#34;https://jupyter.org/&#34;&gt;official project website&lt;/a&gt;.
+To access the JupyterHub service just open &lt;a href=&#34;https://jupyterhub.vbc.ac.at&#34;&gt;https://jupyterhub.vbc.ac.at&lt;/a&gt; in your browser and click on the &amp;ldquo;&lt;em&gt;&lt;strong&gt;Sign in with Azure AD&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; button. Once authenticated the user will see the the screen to open the default JupyterLab session (see &lt;em&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;&lt;/em&gt;)
+The user can choose from one of 3 job presets and also customize the individual job geometry by clicking on the &amp;ldquo;Customize&amp;rdquo; checkbox and changing the values for &amp;ldquo;&lt;em&gt;&lt;strong&gt;Memory&lt;/strong&gt;&lt;/em&gt;&amp;quot;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Cores&lt;/strong&gt;&lt;/em&gt;&amp;quot;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt;&amp;quot;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Partition&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; or &amp;ldquo;&lt;em&gt;&lt;strong&gt;GPUs&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; (optional).&lt;/p&gt;
+&lt;p&gt;Additionally the user can select from 2 Jupyter environments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Environment based on Conda (Python, R)&lt;/li&gt;
+&lt;li&gt;Environment based on CBE env modules (Python 3.6.6)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following table should help choose the right option:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Features&lt;/th&gt;
+&lt;th&gt;Conda enviornment&lt;/th&gt;
+&lt;th&gt;CBE env module environment&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Kernels&lt;/td&gt;
+&lt;td&gt;R &amp;amp; Python&lt;/td&gt;
+&lt;td&gt;Python 3.6.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Custom conda environment&lt;/td&gt;
+&lt;td&gt;YES&lt;/td&gt;
+&lt;td&gt;NO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Support to load additional CBE modules&lt;/td&gt;
+&lt;td&gt;NO&lt;/td&gt;
+&lt;td&gt;YES&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Performance&lt;/td&gt;
+&lt;td&gt;depends on pkgs installed in the conda environment&lt;/td&gt;
+&lt;td&gt;optimized because they are compiled by HPC Team&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 850px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;https://clip-hpc.github.io/docs/jupyterhub/session_new_huaf787012deecdf4048a0adc826b72aff_150136_840x0_resize_catmullrom_2.png&#34; width=&#34;840&#34; height=&#34;772&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Figure 1 - Creating a new JupyterLab session
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;Depending on which Jupyter environment is selected one of the following JupyterLab sessions will be presented to the user once the session is started.&lt;/p&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 450px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;https://clip-hpc.github.io/docs/jupyterhub/session_conda_hu9cd03dedbd78ab64eeb753c470217c50_372428_440x0_resize_catmullrom_2.png&#34; width=&#34;440&#34; height=&#34;321&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Figure 2 - Conda based environment
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;  
+&lt;/td&gt;
+&lt;td&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 450px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;https://clip-hpc.github.io/docs/jupyterhub/session_modules_hub264fb07b975fd366bed83d49792d2e9_385208_440x0_resize_catmullrom_2.png&#34; width=&#34;440&#34; height=&#34;344&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Figure 3 - CBE env module based environment
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+On the left side, a navigation panel is displayed with different widgets:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;File browser&lt;/strong&gt;: Open notebooks &amp;amp; create, delete files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HDF5 viewer&lt;/strong&gt;: View HDF5 datasets in the main panel&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Session viewer&lt;/strong&gt;: See and manage (stop) running consoles and kernels&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git viewer&lt;/strong&gt;: See git repository information&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commands&lt;/strong&gt;: Quickly search and run comands that are also available through the top menu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data explorer&lt;/strong&gt;: Explore datasets (csv, etc)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tab viewer&lt;/strong&gt;: See open tabs and close them&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software&lt;/strong&gt; (only in CBE env module environment): Load and unload Environment Modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On the main panel you can start either a new Python, R notebook or console or open a terminal.&lt;/p&gt;
+&lt;p&gt;If you started the Conda based Jupyter environment you will see in addition to the default Python3 notebook, also any additional conda environments that contain the ipykernel or irkernel package. Additionally you can access the conda package manager widget by choosing from the top navigation: &amp;ldquo;Settings -&amp;gt; Conda Packages Manager&amp;rdquo;:&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 850px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;https://clip-hpc.github.io/docs/jupyterhub/conda_pkg_manager_hud9c398296539012d062e0b1161a6dabe_383062_840x0_resize_catmullrom_2.png&#34; width=&#34;840&#34; height=&#34;435&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Figure 4 - Conda Packages Manager
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;The &amp;ldquo;Conda Pacakges Manager&amp;rdquo; shows you the discovered conda environments and allows you to create new conda environments either from scratch or by cloning an existing one and installing/updating packages in any conda environment. Fore more information see the &lt;a href=&#34;https://github.com/fcollonval/jupyter_conda#jupyterlab&#34;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;multiple-jupyterlab-sessions&#34;&gt;Multiple JupyterLab sessions&lt;/h2&gt;
+&lt;p&gt;Sometimes you might want to run multiple different JupyterLab sessions - with different resource requirements or different Jupyter environments (Conda or CBE modules based) in parallel.
+You can do this by opening the JupterHub view by either going through &amp;ldquo;&lt;strong&gt;File -&amp;gt; Hub Control Panel&lt;/strong&gt;&amp;rdquo; in the already opened JupyterLab session or by navigating to &lt;a href=&#34;https://jupyterhub.vbc.ac.at/hub/home&#34;&gt;https://jupyterhub.vbc.ac.at/hub/home&lt;/a&gt; in a new browser tab.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 850px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;https://clip-hpc.github.io/docs/jupyterhub/session_list_hu7812db3b2e491a243e2c4a4c2baf2117_141570_840x0_resize_catmullrom_2.png&#34; width=&#34;840&#34; height=&#34;241&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Figure 5 - Starting multiple JupyterLab sessions
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;Here you can see the list of existing JupyterLab sessions. You can stop or start and delete them. The default JupyterLab session can be controlled and accessed by the big &amp;ldquo;&lt;em&gt;&lt;strong&gt;Stop My Server&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; and &amp;ldquo;&lt;em&gt;&lt;strong&gt;My Server&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; buttons.&lt;br&gt;
+To start a new JupyterLab session just choose a name and click on the &amp;ldquo;Add New Server&amp;rdquo; link.
+This will show you the familiar session start screen from &lt;em&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;custom-jupyter-kernels&#34;&gt;Custom Jupyter Kernels&lt;/h2&gt;
+&lt;p&gt;A &amp;ldquo;&lt;em&gt;&lt;strong&gt;kernel&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; in the Jupyter universe is an interpreter for a Notebook. Kernels are available for various languages (Python, R, &amp;hellip;). While Conda environments will be picked up automatically as custom kernels, you can also manually add Kernels to JupyterLab.&lt;/p&gt;
+&lt;p&gt;In essence, the kernel spec is a json config file that tells JupyterLab which interpreter to use for the Notebook.&lt;/p&gt;
+&lt;h3 id=&#34;example-python-virtualenv-as-kernel&#34;&gt;Example Python virtualenv as Kernel&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;create your virtual environment (i.e. &lt;code&gt;python3 -m venv my_experiment_venv&lt;/code&gt; )&lt;/li&gt;
+&lt;li&gt;enable environment: &lt;code&gt;source my_experiment_venv/bin/activate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The virtual environment needs to have the python module &amp;ldquo;&lt;em&gt;&lt;strong&gt;ipykernel&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; installed (&lt;code&gt;pip install ipykernel&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;add the virtual environment as kernel to jupyter config:&lt;br&gt;
+&lt;code&gt;python -m ipykernel install --user --name myenv --display-name &amp;quot;my Python (myenv)&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The previous step will write some config files to &lt;code&gt;~/.local/share/jupyter/kernels/&amp;lt;myenv&amp;gt;/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;launch new session from Jupyterlab: new kernel is available as icon &amp;ldquo;&lt;em&gt;&lt;strong&gt;my Python (myenv)&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To remove a kernel, you can delete the directory holding the kernel config files,i.e. &lt;code&gt;~/.local/share/jupyter/kernels/&amp;lt;myenv&amp;gt;/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;For more details, see the upstream docs: &lt;a href=&#34;https://ipython.readthedocs.io/en/latest/install/kernel_install.html#kernels-for-different-environments&#34;&gt;https://ipython.readthedocs.io/en/latest/install/kernel_install.html#kernels-for-different-environments&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h2&gt;
+&lt;h3 id=&#34;my-jupyterlab-session-does-not-start&#34;&gt;My JupyterLab session does not start&lt;/h3&gt;
+&lt;p&gt;This can be due to multiple reasons.&lt;br&gt;
+Make sure to start the new session with the &amp;ldquo;&lt;em&gt;&lt;strong&gt;enable logging $HOME/jupyterhub_{jobid}.log&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; option turned on. If the session hangs, check the log file for any errors.&lt;br&gt;
+Potentially your user environment is broken and the log files gives you hints how to fix it. If not create a ticket.&lt;/p&gt;
+&lt;h3 id=&#34;i-created-a-new-conda-environment-but-i-cant-create-a-new-notebook-using-that-environment&#34;&gt;I created a new conda environment but I can&amp;rsquo;t create a new notebook using that environment&lt;/h3&gt;
+&lt;p&gt;Make sure to install the &lt;code&gt;ipykernel&lt;/code&gt; or &lt;code&gt;irkernel&lt;/code&gt; into the new conda environment so that it will appear in the launcher and can be selected as a kernel in the kernel switcher. It might take a while until it shows up.&lt;/p&gt;
+&lt;h3 id=&#34;my-python-notebook-does-not-start-when-i-use-the-cbe-env-module-based-environment&#34;&gt;My Python notebook does not start when I use the CBE env module based environment&lt;/h3&gt;
+&lt;p&gt;Make sure that you didn&amp;rsquo;t accidentally unload the Python 3.6.6 CBE module in the lmod widget. You can also check the log file in your home directory what the error is.&lt;/p&gt;
+
       </description>
     </item>
     
