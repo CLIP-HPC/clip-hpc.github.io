@@ -25,12 +25,12 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clip-hpc.github.io/docs/changelog/" />
-<meta property="article:modified_time" content="2020-04-29T14:47:13+02:00" />
+<meta property="article:modified_time" content="2020-04-30T11:26:11+02:00" />
 <meta itemprop="name" content="Change Notes">
 <meta itemprop="description" content="This page contains the relevant, i.e. user-visible, changes that were performed during CBE&#39;s monthly maintenance in reverse chronological order.
 ">
-<meta itemprop="dateModified" content="2020-04-29T14:47:13&#43;02:00" />
-<meta itemprop="wordCount" content="798">
+<meta itemprop="dateModified" content="2020-04-30T11:26:11&#43;02:00" />
+<meta itemprop="wordCount" content="842">
 
 
 
@@ -300,6 +300,11 @@
 
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#2020-04-30">2020-04-30</a>
+      <ul>
+        <li><a href="#jupyterhub">Jupyterhub</a></li>
+      </ul>
+    </li>
     <li><a href="#2020-04-16">2020-04-16</a>
       <ul>
         <li><a href="#rstudio">Rstudio</a></li>
@@ -314,7 +319,7 @@
       <ul>
         <li><a href="#xpra">XPRA</a></li>
         <li><a href="#rstudio-1">Rstudio</a></li>
-        <li><a href="#jupyterhub">JupyterHub</a></li>
+        <li><a href="#jupyterhub-1">JupyterHub</a></li>
         <li><a href="#singularity">Singularity</a></li>
       </ul>
     </li>
@@ -374,6 +379,15 @@
 CBE maintenance is scheduled on the first Thursday of every month from 10 a.m. until 10 a.m. the next day. A reservation will be placed on the entire system so that all job queues will be empty when the system goes down. Scheduled maintenance periods will be announced in the Message of the Day (MOTD) when logging into CBE ahead of time as well as via e-mail.
 </div>
 
+<h2 id="2020-04-30">2020-04-30</h2>
+<h3 id="jupyterhub">Jupyterhub</h3>
+<ul>
+<li>JupyterHub updated to version 1.1.0</li>
+<li>software modules from CBE batch environment can be loaded from within JupyterHub at runtime</li>
+<li>management of custom Conda environments via jupyter-conda extension</li>
+<li>user-installed Conda environments are discovered automatically</li>
+<li>customize and override requested runtime, CPU, and memory resources</li>
+</ul>
 <h2 id="2020-04-16">2020-04-16</h2>
 <h3 id="rstudio">Rstudio</h3>
 <ul>
@@ -394,7 +408,7 @@ CBE maintenance is scheduled on the first Thursday of every month from 10 a.m. u
 <p>Web-based graphical cluster access via XPRA is now available on CBE, similar to the II-2 cluster before. Sessions can be launched from the <a href="https://it.vbc.ac.at/clip/cbe/xpra">IT website</a> while some documentation is available <a href="https://docs.vbc.ac.at/books/scientific-computing/page/web-access-%28xpra%29-b1a">here</a>. Currently available applications include Rstudio, Fiji, IGV Genome Browser and generic XTerm. The latter of course permits the invocation of other tools with graphical user interfaces like SPHIRE or Relion after loading the respective modules. Note that CBE access is required to run XPRA sessions, for which you can apply <a href="https://jira.vbc.ac.at/servicedesk/customer/portal/1/create/13">here</a>.</p>
 <h3 id="rstudio-1">Rstudio</h3>
 <p>As mentioned above, access to Rstudio is provided through XPRA. Please see the Links in the paragraph above. Rstudio documentation is available here.</p>
-<h3 id="jupyterhub">JupyterHub</h3>
+<h3 id="jupyterhub-1">JupyterHub</h3>
 <p>JupyterHub has also been installed recently and can be accessed here. Users can specify job types with different resource configurations (memory, GPUs, runtime) and choose from a Conda-based environment for interactive work or an environment based on CBE’s Python modules for prototyping batch jobs. Note that CBE access is required to use JupyterHub, for which you can apply here.</p>
 <h3 id="singularity">Singularity</h3>
 <p>The Singularity module available on CBE was upgraded from version 3.2.1 to version 3.4.1. The earlier version is no longer available. Please remember to update your scripts accordingly. Also note that due to a software bug, we had to unset $SINGULARITY_TMPDIR which used to point to your user home directory in the previous version.
@@ -477,7 +491,7 @@ Building custom Singularity images is now facilitated with a dedicated Jenkins b
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified April 29, 2020: <a  href="https://github.com/clip-hpc/wesbite//commit/034ebe1ed7d6ee6e3bca6f35edb3eaa4f4832e95">Added JupyterHub documentation (034ebe1)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified April 30, 2020: <a  href="https://github.com/clip-hpc/wesbite//commit/9312be67b32e2b76f11c65d6fd418f52a5d87380">Added change notes (9312be6)</a>
 </div>
 </div>
 

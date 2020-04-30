@@ -1313,6 +1313,15 @@ The computer from which you initiated the transfer is not in the data path and c
 CBE maintenance is scheduled on the first Thursday of every month from 10 a.m. until 10 a.m. the next day. A reservation will be placed on the entire system so that all job queues will be empty when the system goes down. Scheduled maintenance periods will be announced in the Message of the Day (MOTD) when logging into CBE ahead of time as well as via e-mail.
 &lt;/div&gt;
 
+&lt;h2 id=&#34;2020-04-30&#34;&gt;2020-04-30&lt;/h2&gt;
+&lt;h3 id=&#34;jupyterhub&#34;&gt;Jupyterhub&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;JupyterHub updated to version 1.1.0&lt;/li&gt;
+&lt;li&gt;software modules from CBE batch environment can be loaded from within JupyterHub at runtime&lt;/li&gt;
+&lt;li&gt;management of custom Conda environments via jupyter-conda extension&lt;/li&gt;
+&lt;li&gt;user-installed Conda environments are discovered automatically&lt;/li&gt;
+&lt;li&gt;customize and override requested runtime, CPU, and memory resources&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;2020-04-16&#34;&gt;2020-04-16&lt;/h2&gt;
 &lt;h3 id=&#34;rstudio&#34;&gt;Rstudio&lt;/h3&gt;
 &lt;ul&gt;
@@ -1333,7 +1342,7 @@ CBE maintenance is scheduled on the first Thursday of every month from 10 a.m. u
 &lt;p&gt;Web-based graphical cluster access via XPRA is now available on CBE, similar to the II-2 cluster before. Sessions can be launched from the &lt;a href=&#34;https://it.vbc.ac.at/clip/cbe/xpra&#34;&gt;IT website&lt;/a&gt; while some documentation is available &lt;a href=&#34;https://docs.vbc.ac.at/books/scientific-computing/page/web-access-%28xpra%29-b1a&#34;&gt;here&lt;/a&gt;. Currently available applications include Rstudio, Fiji, IGV Genome Browser and generic XTerm. The latter of course permits the invocation of other tools with graphical user interfaces like SPHIRE or Relion after loading the respective modules. Note that CBE access is required to run XPRA sessions, for which you can apply &lt;a href=&#34;https://jira.vbc.ac.at/servicedesk/customer/portal/1/create/13&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;rstudio-1&#34;&gt;Rstudio&lt;/h3&gt;
 &lt;p&gt;As mentioned above, access to Rstudio is provided through XPRA. Please see the Links in the paragraph above. Rstudio documentation is available here.&lt;/p&gt;
-&lt;h3 id=&#34;jupyterhub&#34;&gt;JupyterHub&lt;/h3&gt;
+&lt;h3 id=&#34;jupyterhub-1&#34;&gt;JupyterHub&lt;/h3&gt;
 &lt;p&gt;JupyterHub has also been installed recently and can be accessed here. Users can specify job types with different resource configurations (memory, GPUs, runtime) and choose from a Conda-based environment for interactive work or an environment based on CBE’s Python modules for prototyping batch jobs. Note that CBE access is required to use JupyterHub, for which you can apply here.&lt;/p&gt;
 &lt;h3 id=&#34;singularity&#34;&gt;Singularity&lt;/h3&gt;
 &lt;p&gt;The Singularity module available on CBE was upgraded from version 3.2.1 to version 3.4.1. The earlier version is no longer available. Please remember to update your scripts accordingly. Also note that due to a software bug, we had to unset $SINGULARITY_TMPDIR which used to point to your user home directory in the previous version.

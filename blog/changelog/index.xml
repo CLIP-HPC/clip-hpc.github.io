@@ -15,6 +15,27 @@
     
     
     <item>
+      <title>Blog: 2020-04-30</title>
+      <link>https://clip-hpc.github.io/blog/2020/04/30/2020-04-30/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://clip-hpc.github.io/blog/2020/04/30/2020-04-30/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;jupyterhub&#34;&gt;Jupyterhub&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;JupyterHub updated to version 1.1.0&lt;/li&gt;
+&lt;li&gt;software modules from CBE batch environment can be loaded from within JupyterHub at runtime&lt;/li&gt;
+&lt;li&gt;management of custom Conda environments via jupyter-conda extension&lt;/li&gt;
+&lt;li&gt;user-installed Conda environments are discovered automatically&lt;/li&gt;
+&lt;li&gt;customize and override requested runtime, CPU, and memory resources&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: 2020-04-16</title>
       <link>https://clip-hpc.github.io/blog/2020/04/16/2020-04-16/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
