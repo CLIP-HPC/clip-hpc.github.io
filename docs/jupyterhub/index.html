@@ -25,12 +25,12 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clip-hpc.github.io/docs/jupyterhub/" />
-<meta property="article:modified_time" content="2020-04-30T11:26:11+02:00" />
+<meta property="article:modified_time" content="2020-05-06T10:36:49+02:00" />
 <meta itemprop="name" content="JupyterHub on CLIP">
 <meta itemprop="description" content="This page contains information about the JupyterHub service on CLIP
 ">
-<meta itemprop="dateModified" content="2020-04-30T11:26:11&#43;02:00" />
-<meta itemprop="wordCount" content="933">
+<meta itemprop="dateModified" content="2020-05-06T10:36:49&#43;02:00" />
+<meta itemprop="wordCount" content="1023">
 
 
 
@@ -309,6 +309,7 @@
     </li>
     <li><a href="#troubleshooting">Troubleshooting</a>
       <ul>
+        <li><a href="#i-cannot-access-files-and-notebooks-that-are-on-my-group-share">I cannot access files and notebooks that are on my group share</a></li>
         <li><a href="#my-jupyterlab-session-does-not-start">My JupyterLab session does not start</a></li>
         <li><a href="#i-created-a-new-conda-environment-but-i-cant-create-a-new-notebook-using-that-environment">I created a new conda environment but I can&rsquo;t create a new notebook using that environment</a></li>
         <li><a href="#my-python-notebook-does-not-start-when-i-use-the-cbe-env-module-based-environment">My Python notebook does not start when I use the CBE env module based environment</a></li>
@@ -525,6 +526,12 @@ This will show you the familiar session start screen from <em><strong>Figure 1</
 <p>To remove a kernel, you can delete the directory holding the kernel config files,i.e. <code>~/.local/share/jupyter/kernels/&lt;myenv&gt;/</code></p>
 <p>For more details, see the upstream docs: <a href="https://ipython.readthedocs.io/en/latest/install/kernel_install.html#kernels-for-different-environments">https://ipython.readthedocs.io/en/latest/install/kernel_install.html#kernels-for-different-environments</a></p>
 <h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="i-cannot-access-files-and-notebooks-that-are-on-my-group-share">I cannot access files and notebooks that are on my group share</h3>
+<p>The JupyterLab session by default points to the your home directory and there is no easy way to switch to a different location/folder.<br>
+In order to access any other folder (i.e. <code>/scratch-cbe</code>, <code>/scratch</code> or <code>/groups</code>) outside of your home directory, log into CBE and create a symlink to that folder in your home directory:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> ~
+ln -s /groups/&lt;group&gt;
+</code></pre></div><p>In the JupyterLab session you an then follow the symlink in your home directory to access the linked folder.</p>
 <h3 id="my-jupyterlab-session-does-not-start">My JupyterLab session does not start</h3>
 <p>This can be due to multiple reasons.<br>
 Make sure to start the new session with the &ldquo;<em><strong>enable logging $HOME/jupyterhub_{jobid}.log</strong></em>&rdquo; option turned on. If the session hangs, check the log file for any errors.<br>
@@ -596,7 +603,7 @@ Potentially your user environment is broken and the log files gives you hints ho
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified April 30, 2020: <a  href="https://github.com/clip-hpc/wesbite//commit/9312be67b32e2b76f11c65d6fd418f52a5d87380">Added change notes (9312be6)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified May 6, 2020: <a  href="https://github.com/clip-hpc/wesbite//commit/3e2a16f0ec3f8a16230469d7eaa6afc08a08d58b">Added information how to access notebooks in groups (3e2a16f)</a>
 </div>
 </div>
 

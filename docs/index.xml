@@ -974,6 +974,12 @@ This will show you the familiar session start screen from &lt;em&gt;&lt;strong&g
 &lt;p&gt;To remove a kernel, you can delete the directory holding the kernel config files,i.e. &lt;code&gt;~/.local/share/jupyter/kernels/&amp;lt;myenv&amp;gt;/&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;For more details, see the upstream docs: &lt;a href=&#34;https://ipython.readthedocs.io/en/latest/install/kernel_install.html#kernels-for-different-environments&#34;&gt;https://ipython.readthedocs.io/en/latest/install/kernel_install.html#kernels-for-different-environments&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h2&gt;
+&lt;h3 id=&#34;i-cannot-access-files-and-notebooks-that-are-on-my-group-share&#34;&gt;I cannot access files and notebooks that are on my group share&lt;/h3&gt;
+&lt;p&gt;The JupyterLab session by default points to the your home directory and there is no easy way to switch to a different location/folder.&lt;br&gt;
+In order to access any other folder (i.e. &lt;code&gt;/scratch-cbe&lt;/code&gt;, &lt;code&gt;/scratch&lt;/code&gt; or &lt;code&gt;/groups&lt;/code&gt;) outside of your home directory, log into CBE and create a symlink to that folder in your home directory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; ~
+ln -s /groups/&amp;lt;group&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the JupyterLab session you an then follow the symlink in your home directory to access the linked folder.&lt;/p&gt;
 &lt;h3 id=&#34;my-jupyterlab-session-does-not-start&#34;&gt;My JupyterLab session does not start&lt;/h3&gt;
 &lt;p&gt;This can be due to multiple reasons.&lt;br&gt;
 Make sure to start the new session with the &amp;ldquo;&lt;em&gt;&lt;strong&gt;enable logging $HOME/jupyterhub_{jobid}.log&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; option turned on. If the session hangs, check the log file for any errors.&lt;br&gt;
