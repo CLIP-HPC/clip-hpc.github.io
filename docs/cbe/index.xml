@@ -591,6 +591,7 @@ The priority of individual jobs can be trieved using the &lt;code&gt;sprio&lt;/c
 &lt;li&gt;jobs started within the reservation will continue running once the reservation becomes inactive&lt;/li&gt;
 &lt;li&gt;if enough idle resources are available jobs submitted to the reservation can also run on nodes not part of the reservation&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;/div&gt;
 
 &lt;h2 id=&#34;how-to-submit-interactive-jobs&#34;&gt;How to submit interactive jobs&lt;/h2&gt;

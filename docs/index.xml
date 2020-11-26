@@ -728,7 +728,7 @@ Figure 2 - Switching to a different R version
 	&lt;/div&gt;
 	
 &lt;/div&gt;
-&lt;p&gt;The default version of R can be changed by each user in the Global Options in the menubar &amp;ldquo;&lt;strong&gt;Tools &amp;ndash;&amp;gt; Global Options.. &amp;ndash;&amp;gt; General&lt;/strong&gt;&amp;quot;. If you are missing an R package, you can install it using the RStudio package manager. It will install it into your home folder.&lt;/p&gt;
+&lt;p&gt;The default version of R can be changed by each user in the Global Options in the menubar &amp;ldquo;&lt;strong&gt;Tools &amp;ndash;&amp;gt; Global Options.. &amp;ndash;&amp;gt; General&lt;/strong&gt;&amp;rdquo;. If you are missing an R package, you can install it using the RStudio package manager. It will install it into your home folder.&lt;/p&gt;
 &lt;p&gt;Additionally RStudio allows you to run code blocks as separate jobs. This way you can open a RStudio session with little memory and CPU requirements, develop your code/analysis and then submit the finished code block with higher resource requirements. The result of the job will be send back to your running RStudio session and shown in a separate window.&lt;/p&gt;
 
 
@@ -777,6 +777,7 @@ Figure 3 - Running RStudio session on compute node. Select Code and run it a sep
 &lt;li&gt;jobs started within the reservation will continue running once the reservation becomes inactive&lt;/li&gt;
 &lt;li&gt;if enough idle resources are available jobs submitted to the reservation can also run on nodes not part of the reservation&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;/div&gt;
 
 &lt;h2 id=&#34;how-to-submit-interactive-jobs&#34;&gt;How to submit interactive jobs&lt;/h2&gt;
@@ -806,7 +807,7 @@ srun -n &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt
 &lt;p&gt;For interactive data analysis we support JupyterHub on CBE.&lt;br&gt;
 Our JupyterHub service allows you to spawn one or more JupyterLab sessions that are executed on the CBE compute nodes.   Inside this JupyterLab session the user can start Jupyter notebooks that either run an R or Python kernel and execute the code that is stored inside the notebooks. For more information about the Jupyter project refer to the &lt;a href=&#34;https://jupyter.org/&#34;&gt;official project website&lt;/a&gt;.
 To access the JupyterHub service just open &lt;a href=&#34;https://jupyterhub.vbc.ac.at&#34;&gt;https://jupyterhub.vbc.ac.at&lt;/a&gt; in your browser and click on the &amp;ldquo;&lt;em&gt;&lt;strong&gt;Sign in with Azure AD&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; button. Once authenticated the user will see the the screen to open the default JupyterLab session (see &lt;em&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;&lt;/em&gt;)
-The user can choose from one of 3 job presets and also customize the individual job geometry by clicking on the &amp;ldquo;Customize&amp;rdquo; checkbox and changing the values for &amp;ldquo;&lt;em&gt;&lt;strong&gt;Memory&lt;/strong&gt;&lt;/em&gt;&amp;quot;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Cores&lt;/strong&gt;&lt;/em&gt;&amp;quot;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt;&amp;quot;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Partition&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; or &amp;ldquo;&lt;em&gt;&lt;strong&gt;GPUs&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; (optional).&lt;/p&gt;
+The user can choose from one of 3 job presets and also customize the individual job geometry by clicking on the &amp;ldquo;Customize&amp;rdquo; checkbox and changing the values for &amp;ldquo;&lt;em&gt;&lt;strong&gt;Memory&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Cores&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;, &amp;ldquo;&lt;em&gt;&lt;strong&gt;Partition&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; or &amp;ldquo;&lt;em&gt;&lt;strong&gt;GPUs&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; (optional).&lt;/p&gt;
 &lt;p&gt;Additionally the user can select from 2 Jupyter environments:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Environment based on Conda (Python, R)&lt;/li&gt;
@@ -1094,7 +1095,7 @@ Currently /scratch on CBE is available on the GridFTP server.
 	
 &lt;/div&gt;
 &lt;p&gt;Here you can create a new Globus Connect Personal Client endpoint and download the client.
-You need two specify the name for your endpoint (i.e. work-mac) and then click on &amp;ldquo;&lt;strong&gt;Generate Setup Key&lt;/strong&gt;&amp;quot;. This key will be later used to authenticate your client with Globus. Copy it from the popup and keep it safe. You will need it for the client installation (next step).
+You need two specify the name for your endpoint (i.e. work-mac) and then click on &amp;ldquo;&lt;strong&gt;Generate Setup Key&lt;/strong&gt;&amp;rdquo;. This key will be later used to authenticate your client with Globus. Copy it from the popup and keep it safe. You will need it for the client installation (next step).
 Depending on your operating system, you need to download the corresponding client. See the matching installation guide for more information.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Windows: &lt;a href=&#34;https://docs.globus.org/how-to/globus-connect-personal-windows/&#34;&gt;https://docs.globus.org/how-to/globus-connect-personal-windows/&lt;/a&gt;&lt;/li&gt;
