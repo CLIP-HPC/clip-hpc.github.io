@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CLIP – The Cloud Infrastructure Project</title>
+    <link>https://clip-hpc.github.io/platform/</link>
+    <description>Recent content in The Cloud Infrastructure Project on CLIP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="https://clip-hpc.github.io/platform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
