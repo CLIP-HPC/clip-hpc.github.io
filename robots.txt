@@ -1,0 +1,4 @@
+# Preview build: not for indexing. Production robots.txt is generated only
+# for the production build at https://clip.science/.
+User-agent: *
+Disallow: /

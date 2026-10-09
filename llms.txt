@@ -1,0 +1,23 @@
+# CLIP (Cloud Infrastructure Platform)
+
+> CLIP gives researchers at all institutes of the Austrian Academy of Sciences (ÖAW) and at IMP shared high-performance computing for batch, interactive, and grid workloads.
+
+This site describes CLIP's services and how to get access. Step-by-step technical instructions live on docs.vbc.ac.at. Each page below is also available as Markdown by replacing the trailing slash with `.md` (for example, `/access.md`).
+
+## Pages
+
+- [Home](https://clip.science/): Shared high-performance computing for researchers at the institutes of the Austrian Academy of Sciences (ÖAW) and the Research Institute of Molecular Pathology (IMP).
+- [About](https://clip.science/about/): Founding partners, mission, and citation guidelines for CLIP.
+- [Access](https://clip.science/access/): Who can use CLIP, how to request an account, and how to start computing on CBE.
+- [Careers](https://clip.science/careers/): Open positions on the CLIP infrastructure team.
+- [Data Center](https://clip.science/data-center/): Compute nodes, storage, and network behind CBE, the CLIP Batch Environment.
+- [Documentation](https://clip.science/documentation/): Where to find step-by-step technical documentation for CLIP and CBE.
+- [Solutions](https://clip.science/solutions/): Batch, interactive, and grid computing services offered by CLIP.
+- [Support](https://clip.science/support/): How to get help with CLIP and CBE, and how to contact us if you are considering CLIP.
+- [Trainings](https://clip.science/trainings/): Computational biology, biostatistics, and HPC courses for CLIP researchers.
+- [Where CLIP fits](https://clip.science/where-clip-fits/): Choose between your workstation, CLIP and CBE, and MUSICA for your research computing.
+
+## Documentation
+
+- [CBE documentation](https://docs.vbc.ac.at/research-computing/cbe/): Step-by-step guides for CBE: SSH access, OpenOnDemand, EESSI software modules, and running jobs with SLURM.
+- [VBC MUSICA guide](https://docs.vbc.ac.at/research-computing/musica/): How ÖAW researchers get started on MUSICA, the national supercomputer operated by Austrian Scientific Computing (ASC).
