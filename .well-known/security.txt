@@ -1,0 +1,6 @@
+# Security contact for clip.science (RFC 9116).
+# Renew Expires (at most a year ahead) three months before it passes; see AGENTS.md.
+Contact: mailto:security@vbc.ac.at
+Expires: 2027-10-01T00:00:00Z
+Preferred-Languages: en, de
+Canonical: https://clip.science/.well-known/security.txt

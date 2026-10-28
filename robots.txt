@@ -1,0 +1,25 @@
+# CLIP production robots.txt
+#
+# AI crawlers: PROPOSED policy, pending an owner decision (see
+# docs/website-spec-audit.md, "robots.txt for AI crawlers"). The site
+# publishes public service information, so the named agents below are
+# explicitly allowed. To block one, change its "Allow: /" to "Disallow: /";
+# to add one, append its token to the list.
+
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: PerplexityBot
+User-agent: CCBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://clip.science/sitemap.xml
